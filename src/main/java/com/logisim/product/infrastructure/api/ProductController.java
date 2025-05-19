@@ -1,4 +1,4 @@
-package com.logisim.product.adapter;
+package com.logisim.product.infrastructure.api;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

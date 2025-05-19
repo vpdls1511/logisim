@@ -1,4 +1,4 @@
-package com.logisim.product.domain.option;
+package com.logisim.product.domain.model;
 
 public final class Size {
   private final Long id;
