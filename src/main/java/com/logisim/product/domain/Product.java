@@ -1,4 +1,4 @@
-package com.logisim.product.domain.model;
+package com.logisim.product.domain;
 
 public final class Product {
   private final Long id;
