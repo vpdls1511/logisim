@@ -1,4 +1,4 @@
-package com.logisim.product.domain;
+package com.logisim.product.domain.model;
 
 public final class Product {
   private final Long id;
@@ -11,5 +11,21 @@ public final class Product {
     this.unit = unit;
     this.name = name;
     this.description = description;
+  }
+
+  public Long id() {
+    return id;
+  }
+
+  public String unit() {
+    return unit;
+  }
+
+  public String name() {
+    return name;
+  }
+
+  public String description() {
+    return description;
   }
 }

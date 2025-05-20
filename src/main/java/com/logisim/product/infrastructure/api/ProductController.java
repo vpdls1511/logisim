@@ -1,6 +1,7 @@
 package com.logisim.product.infrastructure.api;
 
 import com.logisim.product.application.command.ProductCreateCommand;
+import com.logisim.product.application.usecase.ProductCreateUseCase;
 import com.logisim.product.infrastructure.api.dto.ProductCreateRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,6 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ProductController {
+
+  private final ProductCreateUseCase createUseCase;
+
+  public ProductController(ProductCreateUseCase createUseCase) {
+    this.createUseCase = createUseCase;
+  }
 
   @PostMapping("/product/create")
   public ResponseEntity<Void> createProduct() {
@@ -20,6 +27,7 @@ public class ProductController {
     @RequestBody final ProductCreateRequest request
     ) {
     ProductCreateCommand command = request.toCommand();
+    createUseCase.create(command);
     return ResponseEntity.ok().build();
   }
 }

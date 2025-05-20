@@ -1,7 +1,7 @@
 package com.logisim.product.application.usecase;
 
-import com.logisim.product.domain.Product;
+import com.logisim.product.application.command.ProductCreateCommand;
 
 public interface ProductCreateUseCase {
-  void create(Product product);
+  void create(ProductCreateCommand command);
 }

@@ -1,4 +1,4 @@
-package com.logisim.product.domain;
+package com.logisim.product.domain.model;
 
 public final class Color {
   private final Long id;
