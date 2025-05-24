@@ -1,8 +1,8 @@
-package com.logisim.product.infrastructure.api;
+package com.logisim.product.adapter.in.api;
 
 import com.logisim.product.application.command.ProductCreateCommand;
 import com.logisim.product.application.usecase.ProductCreateUseCase;
-import com.logisim.product.infrastructure.api.dto.ProductCreateRequest;
+import com.logisim.product.adapter.in.api.dto.ProductCreateRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

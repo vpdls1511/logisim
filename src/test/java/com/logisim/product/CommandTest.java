@@ -1,7 +1,7 @@
 package com.logisim.product;
 
 import com.logisim.product.application.command.ProductCreateCommand;
-import com.logisim.product.infrastructure.api.dto.ProductCreateRequest;
+import com.logisim.product.adapter.in.api.dto.ProductCreateRequest;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;

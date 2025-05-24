@@ -1,4 +1,4 @@
-package com.logisim.product.infrastructure.api.dto;
+package com.logisim.product.adapter.in.api.dto;
 
 import com.logisim.product.application.command.ProductCreateCommand;
 
