@@ -1,4 +1,4 @@
-package com.logisim.product.infrastructure.persistence;
+package com.logisim.product.adapter.out.persistence;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
