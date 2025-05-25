@@ -25,4 +25,10 @@ public class ProductRepositoryAdapter implements ProductRepository {
     ProductEntity entity = productJpaRepository.save(toEntity(product));
     return toDomain(entity);
   }
+
+  @Override
+  public boolean existByName(final String name) {
+    return !productJpaRepository.findByName(name).isEmpty();
+  }
+
 }

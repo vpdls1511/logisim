@@ -1,4 +1,4 @@
-package com.logisim.product.application.usecase;
+package com.logisim.product.application.port.in;
 
 import com.logisim.product.application.command.ProductCreateCommand;
 

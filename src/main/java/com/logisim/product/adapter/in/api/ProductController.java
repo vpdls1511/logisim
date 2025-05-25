@@ -1,7 +1,7 @@
 package com.logisim.product.adapter.in.api;
 
 import com.logisim.product.application.command.ProductCreateCommand;
-import com.logisim.product.application.usecase.ProductCreateUseCase;
+import com.logisim.product.application.port.in.ProductCreateUseCase;
 import com.logisim.product.adapter.in.api.dto.ProductCreateRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,16 +18,17 @@ public class ProductController {
   }
 
   @PostMapping("/product/create")
-  public ResponseEntity<Void> createProduct() {
+  public ResponseEntity<Void> createProduct(
+    @RequestBody final ProductCreateRequest request
+  ) {
+    ProductCreateCommand command = request.toCommand();
+    createUseCase.create(command);
+
     return ResponseEntity.ok().build();
   }
 
   @PostMapping("/product/staking")
-  public ResponseEntity<Void> stakingProduct(
-    @RequestBody final ProductCreateRequest request
-    ) {
-    ProductCreateCommand command = request.toCommand();
-    createUseCase.create(command);
+  public ResponseEntity<Void> stakingProduct() {
     return ResponseEntity.ok().build();
   }
 }
