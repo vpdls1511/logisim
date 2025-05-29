@@ -1,7 +1,7 @@
-package com.logisim.product.application.port.in;
+package com.logisim.product.application.usecase;
 
 import com.logisim.product.application.command.ProductCreateCommand;
 
-public interface ProductCreateUseCase {
+public interface ProductUseCase {
   void create(ProductCreateCommand command);
 }
