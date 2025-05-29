@@ -18,7 +18,7 @@ import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 
 @DisplayName("Product Command 생성 테스트")
-public class CommandTest {
+public class ProductCommandTest {
 
   private Validator validator;
 
