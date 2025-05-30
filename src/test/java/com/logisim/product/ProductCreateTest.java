@@ -1,8 +1,8 @@
 package com.logisim.product;
 
 import com.google.gson.Gson;
-import com.logisim.product.adapter.in.api.ProductController;
-import com.logisim.product.adapter.in.api.dto.ProductCreateRequest;
+import com.logisim.product.adapter.ProductController;
+import com.logisim.product.adapter.request.ProductCreateRequest;
 import com.logisim.product.application.command.ProductCreateCommand;
 import com.logisim.product.application.usecase.ProductUseCase;
 import com.logisim.product.application.validator.ProductValidator;
@@ -18,11 +18,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.ResultActions;
-import org.springframework.test.web.servlet.assertj.MockMvcTester;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 

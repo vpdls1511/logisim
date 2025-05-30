@@ -1,14 +1,14 @@
-package com.logisim.product.adapter.out;
+package com.logisim.product.infrastructure;
 
 import com.logisim.product.domain.model.Product;
 import com.logisim.product.domain.repository.ProductRepository;
-import com.logisim.product.adapter.out.persistence.ProductEntity;
-import com.logisim.product.adapter.out.persistence.ProductJpaRepository;
+import com.logisim.product.infrastructure.persistence.ProductEntity;
+import com.logisim.product.infrastructure.persistence.ProductJpaRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Component;
 
-import static com.logisim.product.adapter.out.mapper.ProductEntityMapper.toDomain;
-import static com.logisim.product.adapter.out.mapper.ProductEntityMapper.toEntity;
+import static com.logisim.product.infrastructure.mapper.ProductEntityMapper.toDomain;
+import static com.logisim.product.infrastructure.mapper.ProductEntityMapper.toEntity;
 
 @Component
 public class ProductRepositoryAdapter implements ProductRepository {

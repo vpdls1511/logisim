@@ -1,4 +1,4 @@
-package com.logisim.inventory.adapter.out.persistance;
+package com.logisim.inventory.infrastructure.persistance;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -1,4 +1,4 @@
-package com.logisim.inventory.adapter.application.command;
+package com.logisim.inventory.application.command;
 
 import com.logisim.common.ValidCommand;
 import com.logisim.inventory.domain.model.Inventory;

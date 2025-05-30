@@ -1,8 +1,8 @@
-package com.logisim.inventory.adapter.application.service;
+package com.logisim.inventory.application.service;
 
 import com.logisim.common.exception.NotCreatedException;
-import com.logisim.inventory.adapter.application.command.InventoryRegisterCommand;
-import com.logisim.inventory.adapter.application.usecase.InventoryRegisterUseCase;
+import com.logisim.inventory.application.command.InventoryRegisterCommand;
+import com.logisim.inventory.application.usecase.InventoryRegisterUseCase;
 import com.logisim.inventory.domain.model.Inventory;
 import com.logisim.inventory.domain.repository.InventoryRepository;
 import com.logisim.product.domain.repository.ProductRepository;

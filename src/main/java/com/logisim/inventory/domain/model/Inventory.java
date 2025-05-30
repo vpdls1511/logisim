@@ -1,6 +1,6 @@
 package com.logisim.inventory.domain.model;
 
-import com.logisim.inventory.adapter.application.command.InventoryRegisterCommand;
+import com.logisim.inventory.application.command.InventoryRegisterCommand;
 
 public class Inventory {
   private final Long id;

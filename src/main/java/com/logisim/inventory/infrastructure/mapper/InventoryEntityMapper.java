@@ -1,6 +1,6 @@
-package com.logisim.inventory.adapter.out.mapper;
+package com.logisim.inventory.infrastructure.mapper;
 
-import com.logisim.inventory.adapter.out.persistance.InventoryEntity;
+import com.logisim.inventory.infrastructure.persistance.InventoryEntity;
 import com.logisim.inventory.domain.model.Inventory;
 
 public class InventoryEntityMapper {

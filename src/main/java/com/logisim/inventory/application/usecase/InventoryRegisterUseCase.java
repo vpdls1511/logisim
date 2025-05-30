@@ -1,6 +1,6 @@
-package com.logisim.inventory.adapter.application.usecase;
+package com.logisim.inventory.application.usecase;
 
-import com.logisim.inventory.adapter.application.command.InventoryRegisterCommand;
+import com.logisim.inventory.application.command.InventoryRegisterCommand;
 import com.logisim.inventory.domain.model.Inventory;
 
 public interface InventoryRegisterUseCase {

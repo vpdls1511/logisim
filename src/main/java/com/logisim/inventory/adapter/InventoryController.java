@@ -1,8 +1,8 @@
-package com.logisim.inventory.adapter.in;
+package com.logisim.inventory.adapter;
 
-import com.logisim.inventory.adapter.application.command.InventoryRegisterCommand;
-import com.logisim.inventory.adapter.application.usecase.InventoryRegisterUseCase;
-import com.logisim.inventory.adapter.in.dto.InventoryRegisterResponse;
+import com.logisim.inventory.application.command.InventoryRegisterCommand;
+import com.logisim.inventory.application.usecase.InventoryRegisterUseCase;
+import com.logisim.inventory.adapter.response.InventoryRegisterResponse;
 import com.logisim.inventory.domain.model.Inventory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

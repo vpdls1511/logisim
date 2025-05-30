@@ -1,7 +1,7 @@
-package com.logisim.product.adapter.out.mapper;
+package com.logisim.product.infrastructure.mapper;
 
 import com.logisim.product.domain.model.Product;
-import com.logisim.product.adapter.out.persistence.ProductEntity;
+import com.logisim.product.infrastructure.persistence.ProductEntity;
 
 public class ProductEntityMapper {
 

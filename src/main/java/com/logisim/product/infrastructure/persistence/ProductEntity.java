@@ -1,4 +1,4 @@
-package com.logisim.product.adapter.out.persistence;
+package com.logisim.product.infrastructure.persistence;
 
 import com.logisim.common.persistence.BaseEntity;
 import jakarta.persistence.*;

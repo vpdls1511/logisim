@@ -1,7 +1,7 @@
 package com.logisim.product;
 
 import com.logisim.product.application.command.ProductCreateCommand;
-import com.logisim.product.adapter.in.api.dto.ProductCreateRequest;
+import com.logisim.product.adapter.request.ProductCreateRequest;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.Validation;
@@ -10,9 +10,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Set;
 
 import static org.assertj.core.api.AssertionsForClassTypes.catchThrowable;

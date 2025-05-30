@@ -1,12 +1,12 @@
-package com.logisim.inventory.adapter.out;
+package com.logisim.inventory.infrastructure;
 
-import com.logisim.inventory.adapter.out.persistance.InventoryEntity;
-import com.logisim.inventory.adapter.out.persistance.InventoryJpaRepository;
+import com.logisim.inventory.infrastructure.persistance.InventoryEntity;
+import com.logisim.inventory.infrastructure.persistance.InventoryJpaRepository;
 import com.logisim.inventory.domain.model.Inventory;
 import com.logisim.inventory.domain.repository.InventoryRepository;
 import org.springframework.stereotype.Repository;
 
-import static com.logisim.inventory.adapter.out.mapper.InventoryEntityMapper.domainToEntity;
+import static com.logisim.inventory.infrastructure.mapper.InventoryEntityMapper.domainToEntity;
 
 @Repository
 public class InventoryRepositoryAdapter implements InventoryRepository {
