@@ -4,14 +4,14 @@ import com.logisim.common.ValidCommand;
 import com.logisim.inventory.domain.model.Inventory;
 import jakarta.validation.constraints.NotNull;
 
-public record InventoryStackingCommand(
+public record InventoryRegisterCommand(
   @NotNull Long productId,
   Long coloOptionId,
   Long sizeOptionId,
   @NotNull Long quantity
-) implements ValidCommand<InventoryStackingCommand> {
+) implements ValidCommand<InventoryRegisterCommand> {
 
-  public InventoryStackingCommand(final Long productId, final Long coloOptionId, final Long sizeOptionId, final Long quantity) {
+  public InventoryRegisterCommand(final Long productId, final Long coloOptionId, final Long sizeOptionId, final Long quantity) {
     this.productId = productId;
     this.coloOptionId = coloOptionId;
     this.sizeOptionId = sizeOptionId;

@@ -1,6 +1,6 @@
 package com.logisim.inventory.domain.model;
 
-import com.logisim.inventory.adapter.application.command.InventoryStackingCommand;
+import com.logisim.inventory.adapter.application.command.InventoryRegisterCommand;
 
 public class Inventory {
   private final Long id;
@@ -37,7 +37,7 @@ public class Inventory {
     return quantity;
   }
 
-  public InventoryStackingCommand toCommand() {
-    return new InventoryStackingCommand(id, parent, option1, option2);
+  public InventoryRegisterCommand toCommand() {
+    return new InventoryRegisterCommand(id, parent, option1, option2);
   }
 }

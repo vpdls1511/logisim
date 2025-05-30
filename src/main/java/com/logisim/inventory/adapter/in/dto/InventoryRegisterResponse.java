@@ -1,6 +1,6 @@
 package com.logisim.inventory.adapter.in.dto;
 
-public record InventoryStackingResponse(
+public record InventoryRegisterResponse(
   Long id
 ) {
 }
