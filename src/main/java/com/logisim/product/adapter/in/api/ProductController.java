@@ -26,9 +26,4 @@ public class ProductController {
 
     return ResponseEntity.ok().build();
   }
-
-  @PostMapping("/product/staking")
-  public ResponseEntity<Void> stakingProduct() {
-    return ResponseEntity.ok().build();
-  }
 }
