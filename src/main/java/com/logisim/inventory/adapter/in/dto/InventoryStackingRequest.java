@@ -1,6 +1,6 @@
 package com.logisim.inventory.adapter.in.dto;
 
-import com.logisim.inventory.adapter.application.command.InventoryStackingCommand;
+import com.logisim.inventory.adapter.application.command.InventoryRegisterCommand;
 
 public record InventoryStackingRequest(
   Long productId,
@@ -9,7 +9,7 @@ public record InventoryStackingRequest(
   Long quantity
 ) {
 
-  public InventoryStackingCommand toCommand() {
-    return new InventoryStackingCommand(productId, coloOptionId, sizeOptionId, quantity);
+  public InventoryRegisterCommand toCommand() {
+    return new InventoryRegisterCommand(productId, coloOptionId, sizeOptionId, quantity);
   }
 }

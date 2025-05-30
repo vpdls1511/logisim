@@ -1,8 +1,8 @@
 package com.logisim.inventory.adapter.in;
 
-import com.logisim.inventory.adapter.application.command.InventoryStackingCommand;
-import com.logisim.inventory.adapter.application.usecase.InventoryStackingUseCase;
-import com.logisim.inventory.adapter.in.dto.InventoryStackingResponse;
+import com.logisim.inventory.adapter.application.command.InventoryRegisterCommand;
+import com.logisim.inventory.adapter.application.usecase.InventoryRegisterUseCase;
+import com.logisim.inventory.adapter.in.dto.InventoryRegisterResponse;
 import com.logisim.inventory.domain.model.Inventory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,18 +16,18 @@ import java.net.URI;
 @RequestMapping("/inventory")
 public class InventoryController {
 
-  private final InventoryStackingUseCase inventoryStackingUseCase;
+  private final InventoryRegisterUseCase inventoryRegisterUseCase;
 
-  public InventoryController(final InventoryStackingUseCase inventoryStackingUseCase) {
-    this.inventoryStackingUseCase = inventoryStackingUseCase;
+  public InventoryController(final InventoryRegisterUseCase inventoryRegisterUseCase) {
+    this.inventoryRegisterUseCase = inventoryRegisterUseCase;
   }
 
   @PostMapping
-  public ResponseEntity<InventoryStackingResponse> register(@RequestBody final Inventory inventory) {
-    InventoryStackingCommand command = inventory.toCommand();
-    Inventory request = inventoryStackingUseCase.stackInventoriesInProduct(command);
+  public ResponseEntity<InventoryRegisterResponse> register(@RequestBody final Inventory inventory) {
+    InventoryRegisterCommand command = inventory.toCommand();
+    Inventory request = inventoryRegisterUseCase.registerInventoriesInProduct(command);
 
     return ResponseEntity.created(URI.create("/inventory"))
-      .body(new InventoryStackingResponse(request.id()));
+      .body(new InventoryRegisterResponse(request.id()));
   }
 }
