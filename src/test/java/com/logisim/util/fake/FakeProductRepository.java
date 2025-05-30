@@ -15,4 +15,9 @@ public class FakeProductRepository implements ProductRepository {
     return name.contains("시계줄");
   }
 
+  @Override
+  public boolean existById(Long id) {
+    return false;
+  }
+
 }

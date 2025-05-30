@@ -11,11 +11,19 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class CommonExceptionHandler {
 
-  private static final Logger LOG = LoggerFactory.getLogger(CommonExceptionHandler.class);
+  private static final Logger logger = LoggerFactory.getLogger(CommonExceptionHandler.class);
+
+  @ExceptionHandler(NotCreatedException.class)
+  public ResponseEntity<ErrorMessage> notCreatedException(NotCreatedException e) {
+    logger.warn(e.getMessage());
+    return ResponseEntity
+      .status(HttpStatus.BAD_REQUEST)
+      .body(new ErrorMessage(e.getMessage()));
+  }
 
   @ExceptionHandler(DuplicateProductException.class)
   public ResponseEntity<ErrorMessage> duplicateProductException(final DuplicateProductException e) {
-    LOG.info("Duplicate product exception = {}", e.getMessage());
+    logger.info("Duplicate product exception = {}", e.getMessage());
     return ResponseEntity
       .status(HttpStatus.CONFLICT)
       .body(new ErrorMessage(e.getMessage()));
@@ -23,7 +31,7 @@ public class CommonExceptionHandler {
 
   @ExceptionHandler(RuntimeException.class)
   public ResponseEntity<ErrorMessage> runtimeException(final RuntimeException e) {
-    LOG.warn("Runtime exception = {}", e.getMessage());
+    logger.warn("Runtime exception = {}", e.getMessage());
     return ResponseEntity
       .badRequest()
       .body(new ErrorMessage(e.getMessage()));
@@ -31,7 +39,7 @@ public class CommonExceptionHandler {
 
   @ExceptionHandler(Exception.class)
   public ResponseEntity<ErrorMessage> exception(final Exception e) {
-    LOG.warn("Exception caught in exception = {}", e.getMessage());
+    logger.warn("Exception caught in exception = {}", e.getMessage());
     return ResponseEntity
       .badRequest()
       .body(new ErrorMessage(e.getMessage()));

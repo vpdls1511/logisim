@@ -31,4 +31,9 @@ public class ProductRepositoryAdapter implements ProductRepository {
     return !productJpaRepository.findByName(name).isEmpty();
   }
 
+  @Override
+  public boolean existById(Long id) {
+    return productJpaRepository.findById(id).isPresent();
+  }
+
 }
